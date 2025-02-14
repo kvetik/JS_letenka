@@ -1,5 +1,3 @@
-// document.body.innerHTML += 'JS funguje a bezi jak o zavod';
-
 const flight = {
   id: '145c01af48dd00002715248e_0',
   dTimeUTC: '01/26/2021 @ 1:25pm (UTC)',
