@@ -61,6 +61,5 @@ document.body.innerHTML += '<p> Allowed limits for hand bag: </p>' +
                             '<p> Height: ' + baglimit.hand_height + ' cm </p>' +
                             '<p> Length: ' + baglimit.hand_length + ' cm </p>' +
                             '<p> Weight: ' + baglimit.hand_weight + ' kg </p>';
-                        
-              
+document.body.innerHTML += '<p> Cost for second bag: ' + flight.bags_price[2] + ' CZK</p>';
 
