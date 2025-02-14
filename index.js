@@ -33,17 +33,6 @@ const flight = {
     1: 34.95,
     2: 69.91,
   },
-  baglimit: {
-    hand_width: 20,
-    hand_height: 40,
-    hand_length: 55,
-    hand_weight: 10,
-    hold_width: 81,
-    hold_height: 119,
-    hold_length: 119,
-    hold_dimensions_sum: 319,
-    hold_weight: 20,
-  },
   availability: {
     seats: 2,
   },
@@ -53,5 +42,25 @@ const flight = {
   quality: 66.66659,
 };
 
+const baglimit = {
+    hand_width: 20,
+    hand_height: 40,
+    hand_length: 55,
+    hand_weight: 10,
+    hold_width: 81,
+    hold_height: 119,
+    hold_length: 119,
+    hold_dimensions_sum: 319,
+    hold_weight: 20,
+}
+
 document.body.innerHTML += '<p> Departure from: ' + flight.cityFrom + ', ' + flight.countryFrom.code + ' </p>';
 document.body.innerHTML += '<p> Arrival to: ' + flight.cityTo + ', ' + flight.countryTo.code + ' </p>';
+document.body.innerHTML += '<p> Allowed limits for hand bag: </p>' + 
+                            '<p> Width: ' + baglimit.hand_width + ' cm </p>' +
+                            '<p> Height: ' + baglimit.hand_height + ' cm </p>' +
+                            '<p> Length: ' + baglimit.hand_length + ' cm </p>' +
+                            '<p> Weight: ' + baglimit.hand_weight + ' kg </p>';
+                        
+              
+
