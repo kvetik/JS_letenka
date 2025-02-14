@@ -54,6 +54,10 @@ const baglimit = {
     hold_weight: 20,
 }
 
+const exchangeRate = 36;
+const secondBag_EUR = flight.bags_price[2];
+const secondBag_CZK = Math.ceil(secondBag_EUR * exchangeRate);
+
 document.body.innerHTML += '<p> Departure from: ' + flight.cityFrom + ', ' + flight.countryFrom.code + ' </p>';
 document.body.innerHTML += '<p> Arrival to: ' + flight.cityTo + ', ' + flight.countryTo.code + ' </p>';
 document.body.innerHTML += '<p> Allowed limits for hand bag: </p>' + 
@@ -61,5 +65,5 @@ document.body.innerHTML += '<p> Allowed limits for hand bag: </p>' +
                             '<p> Height: ' + baglimit.hand_height + ' cm </p>' +
                             '<p> Length: ' + baglimit.hand_length + ' cm </p>' +
                             '<p> Weight: ' + baglimit.hand_weight + ' kg </p>';
-document.body.innerHTML += '<p> Cost for second bag: ' + flight.bags_price[2] + ' CZK</p>';
+document.body.innerHTML += '<p> Cost for second bag: ' + secondBag_CZK + ' CZK</p>';
 
