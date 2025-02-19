@@ -38,9 +38,8 @@ const flight = {
     EUR: 36,
   },
   quality: 66.66659,
-};
 
-const baglimit = {
+  baglimit: {
     hand_width: 20,
     hand_height: 40,
     hand_length: 55,
@@ -50,7 +49,20 @@ const baglimit = {
     hold_length: 119,
     hold_dimensions_sum: 319,
     hold_weight: 20,
-}
+  },
+};
+
+const bagSize = {
+  hand_width: 20,
+  hand_height: 40,
+  hand_length: 55,
+  hand_weight: 10,
+  hold_width: 81,
+  hold_height: 119,
+  hold_length: 119,
+  hold_dimensions_sum: 319,
+  hold_weight: 20,
+};
 
 const exchangeRate = 36;
 const secondBag_EUR = flight.bags_price[2];
@@ -60,18 +72,18 @@ const secondBag_CZK = Math.ceil(secondBag_EUR * exchangeRate);
 document.body.innerHTML += '<p> Departure from: ' + flight.cityFrom + ', ' + flight.countryFrom.code + ' </p>';
 document.body.innerHTML += '<p> Arrival to: ' + flight.cityTo + ', ' + flight.countryTo.code + ' </p>';
 document.body.innerHTML += '<p> Allowed limits for hand bag: </p>' + 
-                            '<p> Width: ' + baglimit.hand_width + ' cm </p>' +
-                            '<p> Height: ' + baglimit.hand_height + ' cm </p>' +
-                            '<p> Length: ' + baglimit.hand_length + ' cm </p>' +
-                            '<p> Weight: ' + baglimit.hand_weight + ' kg </p>';
+                            '<p> Width: ' + bagSize.hand_width + ' cm </p>' +
+                            '<p> Height: ' + bagSize.hand_height + ' cm </p>' +
+                            '<p> Length: ' + bagSize.hand_length + ' cm </p>' +
+                            '<p> Weight: ' + bagSize.hand_weight + ' kg </p>';
 document.body.innerHTML += '<p> Cost for second bag: ' + secondBag_CZK + ' CZK</p>';
 */
 
 document.body.innerHTML += `<h2>Departure from: </h2> ${flight.cityFrom}, ${ flight.countryFrom.code}`;
 document.body.innerHTML += `<h2>Arrival to: </h2> ${flight.cityTo}, ${flight.countryTo.code}`;
 document.body.innerHTML += `<h2>Allowed limits for hand bag: </h2>
-                            <p>Width: ${baglimit.hand_width} cm</p>
-                            <p>Height: ${baglimit.hand_height} cm</p>
-                            <p>Length: ${baglimit.hand_length} cm</p>
-                            <p>Weight: ${baglimit.hand_weight} kg</p>`;
+                            <p>Width: ${bagSize.hand_width} cm</p>
+                            <p>Height: ${bagSize.hand_height} cm</p>
+                            <p>Length: ${bagSize.hand_length} cm</p>
+                            <p>Weight: ${bagSize.hand_weight} kg</p>`;
 document.body.innerHTML += `<p>Cost for second bag: ${secondBag_CZK} CZK</p>`;
